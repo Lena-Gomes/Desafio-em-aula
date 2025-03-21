@@ -1,3 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #c50191;
+}
+
+nav ul {
+    list-style: none;
+}
+
 nav ul li { /*filho da nav*/
     display: inline-block; /*alinhar os links*/
     margin-left: 20px;  
@@ -15,26 +44,67 @@ a {
 .produto img {    
     width: 200px;  /*largura*/
     height: 200px;  /*altura*/
-    border-radius: 15px 15px 0px 0px; 
+    border-radius: 15px 15px 15px 15px; 
 
 }
 
 .produto {    /*filho*/
-    width: 200px;
+    width: 220px; /* Aumentando um pouco o tamanho para um design melhor */
     padding-bottom: 10px;
-    border: 1px solid #111111;
-    display:flex;
+    border: 1px solid #4e4e4e;
+    display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 15px;
+    background: #f9f9f9;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    gap: 10px;
     
 }
+
+.produtos .produto:hover {
+    transform: scale(1.05);
+    background-color: #ffb1e9;
+    color: rgb(245, 15, 15);
+    border: none;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: #ffb1e9;
+    cursor: pointer;
+    font-size: 16px;
+} 
+
+
 
 .produtos {   /*pai das div*/
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
+    gap: 30px; /*distancia de cada produtos*/
+    justify-content: center;
+    padding: 20px;
 
 }
 
+.produto button {
+    width: 80%;
+    height: 30px;
+    text-align: center;
+    background-color: #fa8c8c;
+    color: #0f0f0f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+
+}   
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    height: 20px;
+    background-color: #f50b0b;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
